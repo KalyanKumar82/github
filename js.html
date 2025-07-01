@@ -1,0 +1,77 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>
+        This is the javascript file
+    </h1>
+    <form class="form-group">
+        <label for="name">first name :</label>
+        <input type="text" class="form-control" id="firstname" placeholder="enter your firstname">
+        <label for="email">last name :</label>
+        <input type="text" class="form-control" id="lastname" placeholder="enter your lastname">
+        <button type="submit" class="btn btn-primary" onclick ="displayname()">submit</button>
+    </form>
+    <div id="form-data">
+    </div>
+
+
+
+    <script>
+        // console.log("this is a javascript file");
+        // document.write("this is a javascript file");
+
+        // {
+        // var name="john wick";
+        //  }
+        // console.log(name);
+        //  document.write(name);
+        // {
+        //  var name="john wick";
+        // }
+        // console.log(name);
+        // document.write(name);
+
+        // const person = {
+        // name: "john wick",
+        //age: 30,
+        // };
+        //console.log(Person);
+        //document.write(person.name);
+        //console.log(person.name);
+        //document.write(person.age);
+        //console.log(person.age);
+
+        //function name=myname
+        //{}function defination
+        //function calling = myname();
+        //function myname(){
+        // let name ="john wick";
+        //  console.log(name);
+        // document.write(name);
+        //}
+        //myname();
+
+        function displayname() {
+            //prevent the form submitting and refreshing the page
+            event.preventDefault();
+            //getting the data from the input field with the help of id
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            //pushing the data (firstname,lastname) to the div
+             console.log(firstname, lastname);
+            document.getElementById("form-data").innerHTML = `<p>welcome ${firstname} ${lastname}</p>`;
+            document.getElementById("form-data").innerText = `<h1>welcome ${firstname} ${lastname}</h1>`;
+        }
+
+    </script>
+</body>
+
+</html>
